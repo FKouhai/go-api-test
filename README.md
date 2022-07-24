@@ -1,6 +1,6 @@
 # GO API
 
-- For this API Ive used mongodb, this is a test api that implements updates, lists and removes of mongodb files within a collection
+- For this API I've used mongodb, this is a test api that implements updates, lists and removes of mongodb files within a collection
 - This Project can be build by first running go mod init
 - After that you can run go build -o binary_name main
 - This API uses the official mongodb driver since mgo has been out of maintenance for some time now
@@ -13,11 +13,16 @@
 
 # Usage
 
-The usage of this API in my case was just for testing and fun, there will probably be an update where I containerize the application as well as I will run snyk to check if the API/container image has some known vulnerabilities, I will also push a folder with the necessary tests to check the functionality of the application and a Jenkins file, in my case to update/remove content Ive used Postman which was extremely helpful to do some manual testing
+The usage of this API in my case was just for testing and fun 
+
+There will probably be an update where I containerize the application as well as I will run snyk to check if the API/container image has some known vulnerabilities.
+
+I will also push a folder with the necessary tests to check the functionality of the application and a Jenkins file, in my case to update/remove content.
+I've used Postman which was extremely helpful to do some manual testing.
 
 # Tools I've used
 
-- vscode with the ansible extension
+- vscode with the golang extension
 - Postman
 - mongodb
 - Studio 3T for mongodb (this last one is to be able to manage the collections in a visual way)
