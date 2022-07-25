@@ -1,0 +1,33 @@
+
+Testing go-api:v2...
+
+Package manager:   apk
+Project name:      docker-image|go-api
+Docker image:      go-api:v2
+Platform:          linux/amd64
+Base image:        alpine:3.16.1
+
+✔ Tested 14 dependencies for known vulnerabilities, no vulnerable paths found.
+
+According to our scan, you are currently using the most secure version of the selected base image
+
+For more free scans that keep your images secure, sign up to Snyk at https://dockr.ly/3ePqVcp
+
+-------------------------------------------------------
+
+Testing go-api:v2...
+
+Package manager:   gomodules
+Target file:       /api
+Project name:      main
+Docker image:      go-api:v2
+
+✔ Tested 19 dependencies for known vulnerabilities, no vulnerable paths found.
+
+For more free scans that keep your images secure, sign up to Snyk at https://dockr.ly/3ePqVcp
+
+
+Tested 2 projects, no vulnerable paths were found.
+
+
+

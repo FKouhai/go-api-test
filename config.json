@@ -1,0 +1,6 @@
+{
+    "MongoHost":"mongodb://localhost:27017",
+    "Port":":8800",
+    "MongoDB":"movies",
+    "MongoCollection":"movies"
+}

@@ -1,0 +1,6 @@
+{
+    "MongoHost":"mongodb://192.168.0.19:27017",
+    "Port":":8800",
+    "MongoDB":"movies",
+    "MongoCollection":"movies"
+}
