@@ -2,12 +2,14 @@ package main
 
 import (
 	"log"
+	"main/config"
 	"net/http"
 )
 
 func main() {
 	router := NewRouter()
-	log.Println("Server listening on: :8800")
-	server := http.ListenAndServe(":8800", router)
+	config := config.ReadConfig()
+	log.Println("Server listening on: " + config.Port)
+	server := http.ListenAndServe(config.Port, router)
 	log.Fatal(server)
 }

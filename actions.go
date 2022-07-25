@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	c "main/config"
 	"net/http"
 
 	"go.mongodb.org/mongo-driver/bson"
@@ -28,9 +29,10 @@ func (this *Message) setMessage(data string) {
 	this.Message = data
 }
 
-func getSession() *mongo.Client {
+func getSession(config *c.Config) *mongo.Client {
 	ctx := context.TODO()
-	session, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb://localhost:27017"))
+	config = c.ReadConfig()
+	session, err := mongo.Connect(ctx, options.Client().ApplyURI(config.MongoHost))
 	//	session, err := mgo.Dial("localhost:27017")
 	if err != nil {
 		panic(err)
@@ -49,7 +51,7 @@ func responseMovies(w http.ResponseWriter, status int, results []Movie) {
 	json.NewEncoder(w).Encode(results)
 }
 
-var collection = getSession().Database("movies").Collection("movies")
+var collection = getSession(c.ReadConfig()).Database(c.ReadConfig().MongoDB).Collection(c.ReadConfig().MongoDB)
 
 func Index(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hola mundo")
