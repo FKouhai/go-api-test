@@ -28,6 +28,5 @@ I've used Postman which was extremely helpful to do some manual testing.
 - Studio 3T for mongodb (this last one is to be able to manage the collections in a visual way)
 
 # TODO
-- Make the API configurable via json -> configurable values would be, mongodb host,mongodb port and application port
 - Create Jenkinsfile to build the image
 - Create a docker-compose to deploy the API and a sperate container for mongodb
