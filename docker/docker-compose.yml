@@ -1,0 +1,21 @@
+version: '3'
+services:
+  database:
+    image: 'bitnami/mongodb:latest'
+    container_name: "mongodbAPI"
+    environment:
+      - MONGODB_ROOT_PASSWORD=secret
+      - MONGODB_DATABASE=movies
+      - MONGODB_USERNAME=root
+      - MONGODB_DATABASE=secret
+    volumes:
+      - ./data/:/data/db
+    ports:
+      - '27017-27019'
+  api:
+    image: 'go-api:v3'
+    container_name: "go-api"
+    volumes:
+      - ./config.json:/config.json:ro
+    ports:
+      - '8800:8800'
