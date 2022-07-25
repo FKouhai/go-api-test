@@ -2,3 +2,6 @@
 *.mod
 *.sum
 docker/data/*
+docker/.mongodata
+docker/.mongodata/*
+docker/config.json
