@@ -26,7 +26,15 @@ I've used Postman which was extremely helpful to do some manual testing.
 - Postman
 - mongodb
 - Studio 3T for mongodb (this last one is to be able to manage the collections in a visual way)
+- docker
+- docker-compose
+
+# Images I've used
+- golang:1.13-alpine3.11
+- alpine:3.16
+- bitnami/mongodb:latest
+
 
 # TODO
 - Create Jenkinsfile to build the image
-- Create a docker-compose to deploy the API and a sperate container for mongodb
+- Create unit tests
