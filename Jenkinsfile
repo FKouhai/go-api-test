@@ -8,13 +8,13 @@ pipeline {
     def CURRDATE = sh(script: "echo `date +%m_%d_%y`", returnStdout: true).trim()
     GOPATH="${WORKSPACE}"
     BINDEST="${JENKINS_HOME}/binaries"
-    AGENTBIN="agent_${BUILD_ID}_${CURRDATE}"
+    AGENTBIN="api_${BUILD_ID}_${CURRDATE}"
   }
   stages {
     stage("build"){
       steps {
         echo 'Building the agent binary'
-        sh 'go build -o ${AGENTBIN} src/agent/agent.go'
+        sh 'go build -o ${AGENTBIN} main'
       }
     }
   }
