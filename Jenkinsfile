@@ -14,6 +14,8 @@ pipeline {
     stage("build"){
       steps {
         echo 'Building the agent binary'
+        sh 'go mod init main'
+        sh 'go mod tidy'
         sh 'go build -o ${AGENTBIN} main'
       }
     }
