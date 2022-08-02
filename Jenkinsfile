@@ -13,9 +13,6 @@ pipeline {
   stages {
     stage("build"){
       steps {
-        echo 'Initializing package main and fetching dependencies'
-        sh 'go mod init main'
-        sh 'go mod tidy'
         echo 'Building the api binary'
         sh 'go build -o ${AGENTBIN} main'
       }
