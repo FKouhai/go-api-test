@@ -5,3 +5,4 @@ docker/data/*
 docker/.mongodata
 docker/.mongodata/*
 docker/config.json
+build/Jenkinsfile.config.json
