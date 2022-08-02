@@ -6,7 +6,7 @@ pipeline {
   environment {
     GO111MODULE="off"
     def CURRDATE = sh(script: "echo `date +%m_%d_%y`", returnStdout: true).trim()
-    //GOPATH="${WORKSPACE}"
+    GOPATH="${WORKSPACE}"
     BINDEST="${JENKINS_HOME}/binaries"
     AGENTBIN="api_${BUILD_ID}_${CURRDATE}"
   }
