@@ -14,6 +14,7 @@ pipeline {
     stage("build"){
       steps {
         echo 'Building the api binary'
+        sh 'ls $GOPATH'
         sh 'go build -o ${AGENTBIN} main'
       }
     }
