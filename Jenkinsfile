@@ -6,7 +6,7 @@ pipeline {
   environment {
     GO111MODULE="on"
     def CURRDATE = sh(script: "echo `date +%m_%d_%y`", returnStdout: true).trim()
-    GOPATH="${WORKSPACE}"
+    //GOPATH="${WORKSPACE}"
     BINDEST="${JENKINS_HOME}/binaries"
     AGENTBIN="api_${BUILD_ID}_${CURRDATE}"
   }
@@ -14,8 +14,6 @@ pipeline {
     stage("build"){
       steps {
         echo 'Building the api binary'
-        sh 'ls $GOPATH'
-        sh 'rm $GOPATH/go.mod'
         sh 'go build -o ${AGENTBIN} main'
       }
     }
