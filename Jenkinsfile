@@ -15,6 +15,7 @@ pipeline {
       steps {
         echo 'Building the api binary'
         sh 'ls $GOPATH'
+        sh 'rm $GOPATH/go.mod'
         sh 'go build -o ${AGENTBIN} main'
       }
     }
